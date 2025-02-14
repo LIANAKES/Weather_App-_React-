@@ -2,37 +2,41 @@ import styled from "@emotion/styled";
 import { NavLink, Link } from "react-router-dom";
 
 export const LayoutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  background: linear-gradient(0deg, rgba(18, 45, 77, 0.5), rgba(18, 45, 77, 0.5)),
+              linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  border-bottom: 1px solid #D2D2D2;
+  backdrop-filter: blur(17.8px);
 `;
 
 export const Header = styled.header`
-  display: flex;
+ display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 25.5px 85px;
   width: 100%;
-  height: fit-content;
+  height: 80px;
   background-color: #2f5a6e;
   color: white;
 `;
 
 export const HeaderLogoContainer = styled.div`
-  width: 40px;
-  height: 40px;
   cursor: pointer;
-`;
-
-export const HeaderLogo = styled.img`
-  width: 100%;
-  height: 100%;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.05px;
+  letter-spacing: 0%;
+  white-space: nowrap;
 `;
 
 export const NavContainer = styled.nav`
-  display: flex;
-  gap: 10px;
+   display: flex;
+  gap: 40px;
 `;
+
 
 export const Main = styled.main`
   display: flex;
@@ -41,36 +45,25 @@ export const Main = styled.main`
   padding: 20px;
 `;
 
-export const Footer = styled.footer`
-  display: flex;
-  padding: 30px 70px;
-  width: 100%;
-  height: fit-content;
-  justify-content: space-between;
-  background-color: #2f5a6e;
-  color: white;
-`;
-
-export const FooterNavContainer = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-`;
-
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
+  font-family: Inter, sans-serif;
   font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
   color: white;
+  
+  &:first-of-type {
+    font-weight: 700;
+  }
+
+  &:last-of-type {
+    font-weight: 400;
+  }
+
+  &:hover {
+    color: #ff6347;
+  }
 `;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  font-size: 16px;
-  color: white;
-`;
-
-
-
 
 

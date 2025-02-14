@@ -1,15 +1,22 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import GlobalStyles from './styles/GlobalStyles';
+import Layout from './pages/Layout/Layout';
+import Home from './pages/Home/Home';
+import History from './pages/History/History';
 
-import GlobalStyles from './styles/GlobalStyles'
-
-
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      Weather app
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
+          <Route path="*" element={<p>Page not found</p>} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;  

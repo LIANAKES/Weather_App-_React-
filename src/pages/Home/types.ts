@@ -1,5 +1,7 @@
-export interface UserFormNames {
-  userName: string,
-  age: string,
-  jobTitle: string
+
+export interface WeatherData {
+  id: string;
+  name: string;
+  weather: { description: string; icon: string }[];
+  main: { temp: number };
 }
